@@ -1,6 +1,8 @@
 # ShellScripting_Learning
 
 * Shell Basics
-* AWK
+* Functions
+* Loops
+* AWK - more to be added
 * SED
-* InterviewPrep - Few sample scripts
+* InterviewPrep - Few sample scripts - more to be added
