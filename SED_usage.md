@@ -43,9 +43,9 @@
 * Delete all empty lines
      ```  
      $ sed '/^$/d' Sed_testing.txt
-```  
+     ```  
 * Delete lines starting with 'C'
-```  
+     ```  
      $ sed '/^C/d' Sed_testing.txt
      ```  
 * Replace from 2nd line of the file, whereever h is there replace e with E
