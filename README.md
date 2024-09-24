@@ -3,6 +3,6 @@
 * Shell Basics
 * Functions
 * Loops
-* AWK - more to be added
+* AWK
 * SED
-* InterviewPrep - Few sample scripts - more to be added
+* AutomationScripts - Few scripts that helped to automate certain functionalities
