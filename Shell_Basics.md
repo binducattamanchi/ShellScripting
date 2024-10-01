@@ -88,3 +88,41 @@ Operator	Description	Example
 * -s file	Checks if file has size greater than 0; if yes, then condition becomes true.	[ -s $file ] is true.
 * -e file	Checks if file exists; is true even if file is a directory but exists.	[ -e $file ] is true.
 
+
+# Quoting Mechanisms
+$ for parameter substitution. Eg: name="Alice";echo "Hello, $name!"   # Output: Hello, Alice!
+Backquotes for command substitution. Eg: DATE=`date`;echo "Current Date: $DATE"; 
+\$ to enable literal dollar signs. Eg: echo "I have \$1200"; I have $1200.
+\` to enable literal backquotes
+\" to enable embedded double quotes
+\\ to enable embedded backslashes
+All other \ characters are literal (not special)
+"" Double quotes. Eg:
+* without double quotes: var Raj
+echo '$VAR owes <-$1500.**>; [ as of (`date +%m/%d`) ]'
+Output: $VAR owes <-$1500.**>; [ as of (`date +%m/%d`) ]
+* with double quotes: var Raj
+echo "$VAR owes <-$1500.**>; [ as of (`date +%m/%d`) ]"
+Output: Raj owes <-$1500.**>; [ as of (07/02) ]
+
+# Redirection Commands
+Sr.No.	Command & Description
+*	pgm > file
+Output of pgm is redirected to file	
+* pgm < file
+Program pgm reads its input from file	
+* pgm >> file
+Output of pgm is appended to file
+* n > file
+Output from stream with descriptor n redirected to file	
+* n >> file
+Output from stream with descriptor n appended to file
+* n >& m
+Merges output from stream n with stream m
+* n <& m
+Merges input from stream n with stream m
+* << tag
+Standard input comes from here through next tag at the start of line	
+* | Takes output from one program, or process, and sends it to another
+
+Note that the file descriptor 0 is normally standard input (STDIN), 1 is standard output (STDOUT), and 2 is standard error output (STDERR).
